@@ -61,11 +61,18 @@
     function setMapStyle() {
         var selectBox = document.getElementById('selected-month');
         map.data.setStyle(function (feature) {
-            console.log(feature.getProperty('data'))
-            var selectedMonth = selectBox.options[selectBox.selectedIndex].value;
-            var incidents = feature.getProperty('data')[selectedMonth];
+            const regionData = feature.getProperty('data');
+            let previousMonth;
+            let growth = -1;
+            let selectedMonth = selectBox.options[selectBox.selectedIndex].value;
+            let incidents = regionData[selectedMonth];
+            if (selectBox.selectedIndex) {
+                previousMonth = selectBox.options[selectBox.selectedIndex -1].value;
+                growth = incidents -  regionData[previousMonth]
+            }
+
             return {
-                icon: getCircle(incidents)
+                icon: getCircle(incidents, growth)
             };
         });
     }
@@ -93,10 +100,17 @@
         });
     }
 
-    function getCircle(incidents) {
+    function getCircle(incidents, growth) {
+        let fillColor
+        console.log(growth);
+        if (growth > 0) {
+            fillColor = 'red'
+        } else {
+            fillColor = 'green'
+        }
         return {
             path: google.maps.SymbolPath.CIRCLE,
-            fillColor: 'red',
+            fillColor,
             fillOpacity: .2,
             scale: incidents / 250,
             strokeColor: 'white',
