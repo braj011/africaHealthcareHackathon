@@ -6,7 +6,7 @@ eqfeed_callback({
             "geometry": {"type": "Point", "coordinates": [-0.117434, 51.517373]},
             "id": "London",
             "properties": {
-                "data": {
+                "incidents": {
                     "January-2020": "9467",
                     "February-2020": "17018",
                     "March-2020": "18234",
@@ -19,6 +19,20 @@ eqfeed_callback({
                     "October-2020": "8672",
                     "November-2020": "8670",
                     "December-2020": "10044",
+                },
+                "ratio": {
+                    "January-2020": "0.16",
+                    "February-2020": "0.29",
+                    "March-2020": "0.29",
+                    "April-2020": "0.25",
+                    "May-2020": "0.25",
+                    "June-2020": "0.27",
+                    "July-2020": "0.23",
+                    "August-2020": "0.17",
+                    "September-2020": "0.14",
+                    "October-2020": "0.13",
+                    "November-2020": "0.12",
+                    "December-2020": "0.12",
                 }
             }
         },
@@ -27,7 +41,7 @@ eqfeed_callback({
             "geometry": {"type": "Point", "coordinates": [-1.7936651, 52.9454354]},
             "id": "Midlands",
             "properties": {
-                "data": {
+                "incidents": {
                     "January-2020": "12928",
                     "February-2020": "10064",
                     "March-2020": "12017",
@@ -40,6 +54,20 @@ eqfeed_callback({
                     "October-2020": "14403",
                     "November-2020": "15817",
                     "December-2020": "19395",
+                },
+                "ratio": {
+                    "January-2020": "0.21",
+                    "February-2020": "0.17",
+                    "March-2020": "0.19",
+                    "April-2020": "0.20",
+                    "May-2020": "0.20",
+                    "June-2020": "0.19",
+                    "July-2020": "0.18",
+                    "August-2020": "0.19",
+                    "September-2020": "0.20",
+                    "October-2020": "0.21",
+                    "November-2020": "0.22",
+                    "December-2020": "0.23",
                 }
             }
         },
@@ -48,7 +76,7 @@ eqfeed_callback({
             "geometry": {"type": "Point", "coordinates": [1, 52.3]},
             "id": "East of England",
             "properties": {
-                "data": {
+                "incidents": {
                     "January-2020": "7347",
                     "February-2020": "7593",
                     "March-2020": "7654",
@@ -61,6 +89,20 @@ eqfeed_callback({
                     "October-2020": "9510",
                     "November-2020": "9692",
                     "December-2020": "9844",
+                },
+                "ratio": {
+                    "January-2020": "0.12",
+                    "February-2020": "0.13",
+                    "March-2020": "0.12",
+                    "April-2020": "0.13",
+                    "May-2020": "0.13",
+                    "June-2020": "0.12",
+                    "July-2020": "0.13",
+                    "August-2020": "0.13",
+                    "September-2020": "0.13",
+                    "October-2020": "0.14",
+                    "November-2020": "0.14",
+                    "December-2020": "0.12",
                 }
             }
         },
@@ -69,7 +111,7 @@ eqfeed_callback({
             "geometry": {"type": "Point", "coordinates": [-0.064706, 51.158354]},
             "id": "South East",
             "properties": {
-                "data": {
+                "incidents": {
                     "January-2020": "7667",
                     "February-2020": "6583",
                     "March-2020": "6886",
@@ -82,6 +124,20 @@ eqfeed_callback({
                     "October-2020": "7282",
                     "November-2020": "7737",
                     "December-2020": "10620",
+                },
+                "ratio": {
+                    "January-2020": "0.13",
+                    "February-2020": "0.11",
+                    "March-2020": "0.11",
+                    "April-2020": "0.10",
+                    "May-2020": "0.11",
+                    "June-2020": "0.10",
+                    "July-2020": "0.11",
+                    "August-2020": "0.11",
+                    "September-2020": "0.11",
+                    "October-2020": "0.11",
+                    "November-2020": "0.11",
+                    "December-2020": "0.13",
                 }
             }
         },
@@ -90,7 +146,7 @@ eqfeed_callback({
             "geometry": {"type": "Point", "coordinates": [-1.017573, 53.899567]},
             "id": "North East",
             "properties": {
-                "data": {
+                "incidents": {
                     "January-2020": "8310",
                     "February-2020": "5878",
                     "March-2020": "6212",
@@ -103,6 +159,20 @@ eqfeed_callback({
                     "October-2020": "10957",
                     "November-2020": "10812",
                     "December-2020": "12012",
+                },
+                "ratio": {
+                    "January-2020": "0.14",
+                    "February-2020": "0.10",
+                    "March-2020": "0.10",
+                    "April-2020": "0.11",
+                    "May-2020": "0.11",
+                    "June-2020": "0.11",
+                    "July-2020": "0.13",
+                    "August-2020": "0.15",
+                    "September-2020": "0.14",
+                    "October-2020": "0.16",
+                    "November-2020": "0.15",
+                    "December-2020": "0.14",
                 }
             }
         },
@@ -111,7 +181,7 @@ eqfeed_callback({
             "geometry": {"type": "Point", "coordinates": [-2.36368, 54.2557]},
             "id": "North West",
             "properties": {
-                "data": {
+                "incidents": {
                     "January-2020": "8310",
                     "February-2020": "5878",
                     "March-2020": "6212",
@@ -124,6 +194,20 @@ eqfeed_callback({
                     "October-2020": "10957",
                     "November-2020": "10812",
                     "December-2020": "12012",
+                },
+                "ratio": {
+                    "January-2020": "0.16",
+                    "February-2020": "0.15",
+                    "March-2020": "0.13",
+                    "April-2020": "0.16",
+                    "May-2020": "0.15",
+                    "June-2020": "0.15",
+                    "July-2020": "0.16",
+                    "August-2020": "0.18",
+                    "September-2020": "0.20",
+                    "October-2020": "0.19",
+                    "November-2020": "0.19",
+                    "December-2020": "0.17",
                 }
             }
         },
@@ -132,7 +216,7 @@ eqfeed_callback({
             "geometry": {"type": "Point", "coordinates": [-2.572638, 51.107475]},
             "id": "South West",
             "properties": {
-                "data": {
+                "incidents": {
                     "January-2020": "5249",
                     "February-2020": "3079",
                     "March-2020": "3452",
@@ -145,6 +229,20 @@ eqfeed_callback({
                     "October-2020": "5189",
                     "November-2020": "5130",
                     "December-2020": "7305",
+                },
+                "ratio": {
+                    "January-2020": "0.09",
+                    "February-2020": "0.05",
+                    "March-2020": "0.05",
+                    "April-2020": "0.06",
+                    "May-2020": "0.05",
+                    "June-2020": "0.06",
+                    "July-2020": "0.06",
+                    "August-2020": "0.07",
+                    "September-2020": "0.08",
+                    "October-2020": "0.08",
+                    "November-2020": "0.07",
+                    "December-2020": "0.09",
                 }
             }
         }

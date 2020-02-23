@@ -32,6 +32,16 @@
             width: 360px;
             height: 20px;
         }
+
+        #data-box {
+            top: 10px;
+            left: 500px;
+            height: 45px;
+            line-height: 45px;
+            width: 500px;
+            display: none;
+        }
+        #data-box { font-size: 1.5em; font-weight: bold }
     </style>
 </head>
 <body>
@@ -53,6 +63,9 @@
             <option value="December-2020">December-2020</option>
         </select>
     </div>
+    <div id="data-box" class="nicebox">
+        Ambulance resource allocation: <span id="data-value">t4est</span>
+    </div>
 </div>
 <div id="map"></div>
 <script>
@@ -61,7 +74,7 @@
     function setMapStyle() {
         var selectBox = document.getElementById('selected-month');
         map.data.setStyle(function (feature) {
-            const regionData = feature.getProperty('data');
+            const regionData = feature.getProperty('incidents');
             let previousMonth;
             let growth = -1;
             let selectedMonth = selectBox.options[selectBox.selectedIndex].value;
@@ -77,12 +90,37 @@
         });
     }
 
+    function mouseInToRegion(e) {
+        // set the hover state so the setStyle function can change the border
+        e.feature.setProperty('state', 'hover');
+
+        // update the label
+        var selectBox = document.getElementById('selected-month');
+        let selectedMonth = selectBox.options[selectBox.selectedIndex].value;
+        document.getElementById('data-value').textContent = parseInt(e.feature.getProperty('ratio')[selectedMonth] * 100) + "%" ;
+        document.getElementById('data-box').style.display = 'block';
+    }
+
+    /**
+     * Responds to the mouse-out event on a map shape (state).
+     *
+     * @param {?google.maps.MouseEvent} e
+     */
+    function mouseOutOfRegion(e) {
+        // reset the hover state, returning the border to normal
+        e.feature.setProperty('state', 'normal');
+    }
+
+
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 6,
             center: {lat: 52.3449, lng: 1.9718},
             mapTypeId: 'terrain'
         });
+
+        map.data.addListener('mouseover', mouseInToRegion);
+        map.data.addListener('mouseout', mouseOutOfRegion);
 
 
         // Create a <script> tag and set the USGS URL as the source.
@@ -101,7 +139,7 @@
     }
 
     function getCircle(incidents, growth) {
-        let fillColor
+        let fillColor;
         console.log(growth);
         if (growth > 0) {
             fillColor = 'red'
